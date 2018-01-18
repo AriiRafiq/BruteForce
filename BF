@@ -280,15 +280,14 @@ echo -e "$white                    |--------- FB.com/AriR.Abdulla --------|"
 echo -e "$white                    '======================================'"
 echo "" && echo "" && echo "" && echo -e "$green" && sleep 0.9
 echo -e $BlueF"	        [$white"01"$BlueF]$cyan  FaceBook             $BlueF	[$white"03"$BlueF]$cyan  Wordlist"
-echo -e $BlueF"	        [$white"02"$BlueF]$cyan  InstaGram            $BlueF	[$white"04"$BlueF]$cyan  Update sys"
-echo -e $BlueF"                                   [$white"05"$BlueF]$cyan  Exit"
+echo -e $BlueF"	        [$white"02"$BlueF]$cyan  InstaGram            $BlueF	[$white"04"$BlueF]$cyan  Exit"
 echo -e " " && echo -e ""
 echo -n -e $red'  \033[4mBruteForce:\033[0m >> '; tput sgr0 #insert your choice
 read bf
 
 
 
-	if [[ "$bf" == "Exit" || "$bf" == "5" ]]; then
+	if [[ "$bf" == "Exit" || "$bf" == "4" ]]; then
 	echo "" && echo -e $BlueF" [$white"*"$BlueF]$red  Exiting ..." && sleep 0.2
 	echo -e $BlueF" [$white"*"$BlueF]$red  GoodBye!"
 	exit 0
