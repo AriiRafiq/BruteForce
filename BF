@@ -126,12 +126,133 @@ fi
 ######START#######
 IG()
 {
-		echo "" && echo -e "$cyan"
+	echo "" && echo -e "$cyan"
+echo -n -e "  Please Enter A Username -$white "
+read un
+if [ -z "$un" ]; then
+		echo ""
+ 				echo -n -e $red"  Do you want exit?$cyan ( Yes / No ) : " ;tput sgr0
+					read back
+						if [ -z "$back" ]; then
+							exit
+							fi
+						if [ $back != 'n' ] && [ $back != 'N' ] && [ $back != 'no' ] && [ $back != 'No' ]
+												then
+													echo "" && echo -e $BlueF" [$white"*"$BlueF]$red  Exiting ..." && sleep 0.2
+                                                 	echo -e $BlueF" [$white"*"$BlueF]$red  GoodBye!"
+	                                                exit 0
+										elif [ $back != 'y' ] && [ $back != 'Y' ] && [ $back != 'yes' ] && [ $back != 'Yes' ]
+												then
+												clear
+                                                BF
+		
+	fi
+fi
+		echo ""
+echo -e $BlueF"  Make Sure Wordlist on /root/Desktop"
+echo ""
+echo -n -e "$cyan  Please Enter Your Wordlist Name -$white "
+read namee
+if [ -z "$namee" ]; then
+	echo ""	
+ 				echo -n -e $red"  Do you want exit?$cyan ( Yes / No ) : " ;tput sgr0
+					read back
+						if [ -z "$back" ]; then
+							exit
+							fi
+						if [ $back != 'n' ] && [ $back != 'N' ] && [ $back != 'no' ] && [ $back != 'No' ]
+												then
+													echo "" && echo -e $BlueF" [$white"*"$BlueF]$red  Exiting ..." && sleep 0.2
+                                                 	echo -e $BlueF" [$white"*"$BlueF]$red  GoodBye!"
+	                                                exit 0
+										elif [ $back != 'y' ] && [ $back != 'Y' ] && [ $back != 'yes' ] && [ $back != 'Yes' ]
+												then
+												clear
+                                                BF
+	fi
+fi
+echo ""
+echo -e $yellow"                           ...:$red Please Wait $yellow:..."	
+echo "" && echo -e "$red" && sleep 0.5	
+python instaBrute.py -u $un -d /root/Desktop/$namee
+echo "" && echo "" && sleep 0.5
+echo -n -e $red"  Do you want exit?$cyan ( Yes / No ) : " ;tput sgr0
+					read back
+						if [ -z "$back" ]; then
+							exit
+							fi
+						if [ $back != 'n' ] && [ $back != 'N' ] && [ $back != 'no' ] && [ $back != 'No' ]
+												then
+													echo "" && echo -e $BlueF" [$white"*"$BlueF]$red  Exiting ..." && sleep 0.2
+                                                 	echo -e $BlueF" [$white"*"$BlueF]$red  GoodBye!"
+	                                                exit 0
+										elif [ $back != 'y' ] && [ $back != 'Y' ] && [ $back != 'yes' ] && [ $back != 'Yes' ]
+												then
+												clear
+                                                BF
+
+fi
 
 }
 #######END#######
 #################
 
+
+
+
+##################
+######START#######
+WL()
+{
+
+	echo "" && echo -e "$cyan"
+cd cupp
+python cupp.py -i
+	echo "" && echo -e "$cyan"
+echo -n -e "$cyan  Please Enter Your Wordlist Name -$white "
+read wl
+if [ -z "$wl" ]; then
+	echo ""	
+ 				echo -n -e $red"  Do you want exit?$cyan ( Yes / No ) : " ;tput sgr0
+					read back
+						if [ -z "$back" ]; then
+							exit
+							fi
+						if [ $back != 'n' ] && [ $back != 'N' ] && [ $back != 'no' ] && [ $back != 'No' ]
+												then
+													echo "" && echo -e $BlueF" [$white"*"$BlueF]$red  Exiting ..." && sleep 0.2
+                                                 	echo -e $BlueF" [$white"*"$BlueF]$red  GoodBye!"
+	                                                exit 0
+										elif [ $back != 'y' ] && [ $back != 'Y' ] && [ $back != 'yes' ] && [ $back != 'Yes' ]
+												then
+												clear
+                                                BF
+	fi
+fi
+echo ""
+mv $wl /root/Desktop
+echo ""
+cd ..
+echo -n -e $red"  Do you want exit?$cyan ( Yes / No ) : " ;tput sgr0
+					read back
+						if [ -z "$back" ]; then
+							exit
+							fi
+						if [ $back != 'n' ] && [ $back != 'N' ] && [ $back != 'no' ] && [ $back != 'No' ]
+												then
+													echo "" && echo -e $BlueF" [$white"*"$BlueF]$red  Exiting ..." && sleep 0.2
+                                                 	echo -e $BlueF" [$white"*"$BlueF]$red  GoodBye!"
+	                                                exit 0
+										elif [ $back != 'y' ] && [ $back != 'Y' ] && [ $back != 'yes' ] && [ $back != 'Yes' ]
+												then
+												clear
+                                                BF
+
+fi
+
+}
+#######END#######
+#################
 
 
 
