@@ -73,7 +73,7 @@ if [ -z "$id" ]; then
 	fi
 fi
 		echo ""
-echo -e $white"  Make Sure Wordlist on /root/Desktop"
+echo -e $BlueF"  Make Sure Wordlist on /root/Desktop"
 echo ""
 echo -n -e "$cyan  Please Enter Your Wordlist Name -$white "
 read name
