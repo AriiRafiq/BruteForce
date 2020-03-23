@@ -73,7 +73,7 @@ if [ -z "$id" ]; then
 	fi
 fi
 		echo ""
-echo -e $BlueF"  Make Sure Wordlist on /root/Desktop"
+echo -e $BlueF"  The Wordlist Must Be on /root/Desktop"
 echo ""
 echo -n -e "$cyan  Please Enter Your Wordlist Name -$white "
 read name
@@ -149,7 +149,7 @@ if [ -z "$un" ]; then
 	fi
 fi
 		echo ""
-echo -e $BlueF"  Make Sure Wordlist on /root/Desktop"
+echo -e $BlueF"  The Wordlist Must Be on BruteForce Folder"
 echo ""
 echo -n -e "$cyan  Please Enter Your Wordlist Name -$white "
 read namee
@@ -174,7 +174,7 @@ fi
 echo ""
 echo -e $yellow"                           ...:$red Please Wait $yellow:..."	
 echo "" && echo -e "$red" && sleep 0.5	
-python instaBrute.py -u $un -d /root/Desktop/$namee
+python3 instagram.py $un $namee
 echo "" && echo "" && sleep 0.5
 echo -n -e $red"  Do you want exit?$cyan ( Yes / No ) : " ;tput sgr0
 					read back
@@ -230,9 +230,10 @@ if [ -z "$wl" ]; then
 	fi
 fi
 echo ""
-mv $wl /root/Desktop
-echo ""
+mv $wl ..
 cd ..
+cp $wl /root/Desktop
+echo ""
 echo -n -e $red"  Do you want exit?$cyan ( Yes / No ) : " ;tput sgr0
 					read back
 						if [ -z "$back" ]; then
