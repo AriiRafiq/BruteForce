@@ -3,6 +3,6 @@
 created by : Ari R. Abdulla
 # 18/1/2018
 
-
-aripenjwen@gmail.com
-https://facebook.com/AriR.Abdulla
+Facebook: Ari R. Abdulla
+Twitter: Ari R. Abdulla
+Youtube: Mr. H4CK3R
