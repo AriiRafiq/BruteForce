@@ -73,7 +73,6 @@ if [ -z "$id" ]; then
 	fi
 fi
 		echo ""
-echo -e $BlueF"  The Wordlist Must Be on /root/Desktop"
 echo ""
 echo -n -e "$cyan  Please Enter Your Wordlist Name -$white "
 read name
@@ -98,7 +97,7 @@ fi
 echo ""
 echo -e $yellow"                           ...:$red Please Wait $yellow:..."	
 echo "" && echo -e "$red" && sleep 0.5	
-perl shadowfb.pl $id /root/Desktop/$name
+perl shadowfb.pl $id $name
 echo "" && echo "" && sleep 0.5
 echo -n -e $red"  Do you want exit?$cyan ( Yes / No ) : " ;tput sgr0
 					read back
@@ -149,7 +148,6 @@ if [ -z "$un" ]; then
 	fi
 fi
 		echo ""
-echo -e $BlueF"  The Wordlist Must Be on BruteForce Folder"
 echo ""
 echo -n -e "$cyan  Please Enter Your Wordlist Name -$white "
 read namee
@@ -232,7 +230,6 @@ fi
 echo ""
 mv $wl ..
 cd ..
-cp $wl /root/Desktop
 echo ""
 echo -n -e $red"  Do you want exit?$cyan ( Yes / No ) : " ;tput sgr0
 					read back
